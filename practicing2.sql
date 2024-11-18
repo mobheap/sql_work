@@ -118,3 +118,22 @@ SELECT DISTINCT
     hire_date
 FROM
     employees;
+SELECT 
+    COUNT(salary)
+FROM
+    salaries
+WHERE
+    salary >= 100000;
+SELECT 
+    COUNT(DISTINCT emp_no)
+FROM
+    dept_manager;
+SELECT 
+    COUNT(*)
+FROM
+    dept_manager;
+SELECT 
+    *
+FROM
+    employees
+ORDER BY hire_date DESC;
