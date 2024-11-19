@@ -137,3 +137,39 @@ SELECT
 FROM
     employees
 ORDER BY hire_date DESC;
+SELECT 
+    first_name, COUNT(first_name) AS names_count
+FROM
+    employees
+GROUP BY first_name;
+SELECT 
+    salary, COUNT(salary) AS emps_with_same_salary
+FROM
+    salaries
+WHERE
+    salary > 80000
+GROUP BY salary;
+SELECT 
+    emp_no, COUNT(emp_no) AS number_of_contracts
+FROM
+    dept_emp
+WHERE
+    from_date > '2000=01-01'
+GROUP BY emp_no
+HAVING COUNT(emp_no) > 1;
+SELECT 
+    *
+FROM
+    salaries
+ORDER BY salary DESC
+LIMIT 10;
+use employees;
+insert into employees
+values (999901, '1986-04-21', 'John', 'Smith', 'M', '2011-01-01');
+SELECT 
+    *
+FROM
+    employees
+WHERE
+    emp_no = 999901;
+    
