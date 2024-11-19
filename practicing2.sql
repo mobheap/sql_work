@@ -172,4 +172,49 @@ FROM
     employees
 WHERE
     emp_no = 999901;
-    
+UPDATE employees 
+SET 
+    first_name = 'Stella',
+    last_name = 'Parkinson',
+    birth_date = '1990-12-31',
+    gender = 'F'
+WHERE
+    emp_no = 999901;
+commit;
+update departments
+set dept_name = 'Data Analysis'
+where dept_name = 'Business Analysis';
+DELETE FROM departments 
+WHERE
+    dept_no = 'd010';
+select * from departments;
+SELECT 
+    COUNT(DISTINCT dept_no)
+FROM
+    dept_emp;
+SELECT 
+    SUM(salary)
+FROM
+    salaries
+WHERE
+    from_date > '1997-01-01';
+SELECT 
+    MIN(emp_no)
+FROM
+    employees;
+SELECT 
+    MAX(emp_no)
+FROM
+    employees;
+SELECT 
+    AVG(salary)
+FROM
+    salaries
+WHERE
+    from_date > '1997-01-01';
+SELECT 
+    ROUND(AVG(salary), 3)
+FROM
+    salaries
+WHERE
+    from_date > '1997-01-01';
